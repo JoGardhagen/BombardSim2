@@ -41,6 +41,16 @@ if(UNIX AND NOT APPLE)
         asound
     )
 endif()
+if(APPLE)
+    # Specifikt för macOS: Länkar in Apples egna grafiksystem
+    target_link_libraries(${PROJECT_NAME} PRIVATE 
+        raylib 
+        "-framework IOKit" 
+        "-framework Cocoa" 
+        "-framework OpenGL" 
+        "-framework CoreVideo"
+    )
+endif()
 
 # G�r det l�tt att hitta bin�rfilen
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

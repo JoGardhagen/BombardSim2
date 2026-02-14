@@ -1,0 +1,26 @@
+# Ignorera byggmappar
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignorera temporära filer från editorer
+*.swp
+*~
+
+# Ignorera macOS-specifika filer
+.DS_Store
+
+# Ignorera Raylib och andra bibliotek som vi laddar ner eller bygger själva
+/deps/
+*.a
+*.so
+*.dylib
+
+# Ignorera loggar och andra temporära filer
+*.log
+*.out
+
+# Ignorera assets om du inte vill ladda upp dem
+#/assets/
