@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",              // Inkluderar alla filer i projektet
+                "/usr/local/include",                 // Exempel på plats där externa bibliotek kan finnas
+                "${workspaceFolder}/_deps/raylib-src/src"   // Söker i din Raylib-källkod om du använder FetchContent
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",         // Specifik väg till kompilatorn
+            "cStandard": "c11",                       // C standard
+            "cppStandard": "c++11",                   // C++ standard (kan vara högre om du använder nyare funktioner)
+            "intelliSenseMode": "macos-clang-x64"     // Specifik för macOS, clang används ofta här
+        }
+    ],
+    "version": 4
+}
