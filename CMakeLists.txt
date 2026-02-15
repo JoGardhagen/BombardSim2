@@ -54,3 +54,12 @@ endif()
 
 # G�r det l�tt att hitta bin�rfilen
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
+# --- 5. Kopiera Assets till bin-mappen ---
+# Detta kommando körs varje gång du skriver 'make'
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/assets"
+        "${CMAKE_BINARY_DIR}/bin/assets"
+    COMMENT "Kopierar assets till bin-mappen för att Raylib ska hitta dem"
+)
