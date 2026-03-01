@@ -1,4 +1,9 @@
 # BombardSim2
+
+```bash
+For the one that work on mac 
+Link : https://github.com/JoGardhagen/BombardSim.git
+```
 # System Deps
 ```bash
 sudo apt update && sudo apt install -y \
